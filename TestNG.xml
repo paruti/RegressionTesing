@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Test Suite" verbose="2" >
+<suite name="Test Suite" verbose="2">
 <groups>
 <run>
-<include name="fb"/>
+<include name="e-commerce"/>
 </run>
 </groups>
 <listeners>
 <listener class-name="com.org.Listen"/>
-
-
 </listeners>
 
-<test name="Login">
+<test name="Login2">
+<parameter name ="browser" value="ie"/>
+
 <classes>
-<class name="com.testcases.LoginFcn">
-</class>
+<class name="com.testcases.LoginFcn"/>
 </classes>
 </test>
+<test name="Login">
+<parameter name ="browser" value="chrome"/>
+
+<classes>
+<class name="com.testcases.LoginFcn"/>
+</classes>
+</test>
+
 </suite>

@@ -4,16 +4,34 @@
   <listeners>
     <listener class-name="com.org.Listen"/>
   </listeners>
-  <test thread-count="5" verbose="2" name="Login(failed)">
+  <test thread-count="5" verbose="2" name="Login2(failed)">
+    <parameter name="browser" value="ie"/>
     <groups>
       <run>
-        <include name="fb"/>
+        <include name="e-commerce"/>
       </run>
     </groups>
     <classes>
       <class name="com.testcases.LoginFcn">
         <methods>
-          <include name="TestCases" invocation-numbers="0 0"/>
+          <include name="flipkart"/>
+          <include name="flipkart1"/>
+        </methods>
+      </class> <!-- com.testcases.LoginFcn -->
+    </classes>
+  </test> <!-- Login2(failed) -->
+  <test thread-count="5" verbose="2" name="Login(failed)">
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="e-commerce"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.testcases.LoginFcn">
+        <methods>
+          <include name="flipkart"/>
+          <include name="flipkart1"/>
         </methods>
       </class> <!-- com.testcases.LoginFcn -->
     </classes>
