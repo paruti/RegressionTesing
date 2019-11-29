@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Test Suite]">
+  <listeners>
+    <listener class-name="com.org.Listen"/>
+  </listeners>
+  <test thread-count="5" verbose="2" name="Login(failed)">
+    <groups>
+      <run>
+        <include name="fb"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.testcases.LoginFcn">
+        <methods>
+          <include name="TestCases" invocation-numbers="0 0"/>
+        </methods>
+      </class> <!-- com.testcases.LoginFcn -->
+    </classes>
+  </test> <!-- Login(failed) -->
+</suite> <!-- Failed suite [Test Suite] -->
